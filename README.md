@@ -140,4 +140,8 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
+  <img src=cat.jpg width=200/>
+  <img src=mouse-1.jpg width=200/>
+  <img src=moose-1.jpg width=200/>
+  <img src=nairobi-1.jpg width=200/>
 
