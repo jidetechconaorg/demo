@@ -37,6 +37,7 @@ jobs:
           git add .
           git commit -m "v$VERSION"
           git branch releasing
+          git pull
           git push -u origin releasing
 
       - name: Push tag
