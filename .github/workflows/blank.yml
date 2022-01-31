@@ -19,11 +19,11 @@ jobs:
       version: "v6.0.0" 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
+#       - uses: actions-rs/toolchain@v1
+#         with:
+#           toolchain: stable
+#           profile: minimal
+#           override: true
 
       - name: update version name
         id: update
