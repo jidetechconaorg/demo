@@ -37,7 +37,7 @@ jobs:
           git add .
           git commit -m "v$VERSION"
           git branch releasing
-          git pull
+          git pull --quiet
           git push -u origin releasing
 
       - name: Push tag
@@ -50,7 +50,7 @@ jobs:
           # create master and push
           git switch -c master
           git fetch origin master --depth=1
-          git push -u origin master
+          git -vvv push -u origin master
       - name: Update To Next Version
         run: |
           VERSION="v6.0.2" 
