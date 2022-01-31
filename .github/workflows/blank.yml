@@ -35,7 +35,6 @@ jobs:
           git add CHANGE.LOG
           git commit -m "$VERSION"
           git branch releasing
-          git pull
           git push -u origin releasing
 
       - name: Push tag
