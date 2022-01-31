@@ -16,7 +16,7 @@ jobs:
     name: Update version name
     runs-on: ubuntu-latest
     outputs:
-      version: "v6.0.0" 
+      version: "v6.0.1" 
     steps:
       - uses: actions/checkout@v2
 #       - uses: actions-rs/toolchain@v1
@@ -32,19 +32,19 @@ jobs:
           git config --global user.name "Peter Juma"
           # update version name
           echo "Making changes $DATE" >> CHANGE.LOG
-          VERSION="v6.0.1"
+          VERSION="v6.0.2"
           # commit & tag
-          git add .
-          git commit -m "v$VERSION"
+          git add CHANGE.LOG
+          git commit -m "$VERSION"
           git branch releasing
           git push -u origin releasing
 
       - name: Push tag
         env:
-          VERSION: "v6.0.1" 
+          VERSION: "v6.0.2" 
         run: |-
           # set tag and publish current version
-          git tag "v6.0.1" 
+          git tag "v6.0.2" 
           git push && git push --tags
           # create master and push
           git switch -c master
@@ -52,7 +52,7 @@ jobs:
           git -vvv push -u origin master
       - name: Update To Next Version
         run: |
-          VERSION="v6.0.2" 
+          VERSION="v6.0.3" 
           git add .
           git commit -m "prepare for next version: $VERSION"
           git push
