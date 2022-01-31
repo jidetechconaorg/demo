@@ -42,7 +42,7 @@ jobs:
           VERSION: "v6.0.3" 
         run: |-
           # set tag and publish current version
-          git tag -a "v6.0.3" -m 
+          git tag -a "v6.0.3" -m "New tag" 
           git push && git push --tags
           # create master and push
           git switch -c master
