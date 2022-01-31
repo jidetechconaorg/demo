@@ -27,7 +27,9 @@ jobs:
 
       - name: update version name
         id: update
-        run: |-
+        run: |- 
+          git config --global user.email "30427827+peterjuma@users.noreply.github.com"
+          git config --global user.name "Peter Juma"
           # update version name
           VERSION="v6.0.1"
           # commit & tag
