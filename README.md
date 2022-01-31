@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # demo
 
 # two line change
