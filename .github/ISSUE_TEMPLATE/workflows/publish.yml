@@ -1,0 +1,61 @@
+name: Publish
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  pre-build:
+    name: Update version name
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.update.outputs.version }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+
+      - name: update version name
+        id: update
+        run: |-
+          # update version name
+          VERSION="$(get-version)"
+          if ! [[ "$VERSION" = *-SNAPSHOT ]]; then
+            echo 'VERSION IS NOT SNAPSHOT' >&2
+            exit 1
+          fi
+          VERSION="$(version-unsnapshot "$VERSION")"
+          echo "::set-output name=version::$VERSION"
+          set-version "$VERSION"
+          cargo metadata --format-version=1 > /dev/null
+          generate-changelog -v "$VERSION" --date-for-unreleased
+          # commit & tag
+          git add .
+          git commit -m "v$VERSION"
+          git branch releasing
+          git push -u origin releasing
+
+  publish:
+      - name: Push tag
+        env:
+          VERSION: ${{ needs.pre-build.outputs.version }}
+        run: |-
+          # set tag and publish current version
+          git tag "v$VERSION"
+          git push && git push --tags
+          # create master and push
+          git switch -c master
+          git fetch origin master --depth=1
+          git push -u origin master
+      - name: Update To Next Version
+        run: |
+          VERSION="$(get-version)"
+          VERSION="$(version-next "$VERSION")"
+          set-version "$(version-snapshot "$VERSION")"
+          cargo metadata --format-version=1 > /dev/null
+          git add .
+          git commit -m "prepare for next version: $VERSION"
+          git push
+          git push --delete origin releasing
