@@ -13,19 +13,10 @@ jobs:
   pre-build:
     name: Update version name
     runs-on: ubuntu-latest
-    outputs:
-      version: "v6.0.4" 
     steps:
-      - uses: actions/checkout@v2
-#       - uses: actions-rs/toolchain@v1
-#         with:
-#           toolchain: stable
-#           profile: minimal
-#           override: true
-
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Push tag
-        env:
-          VERSION: "v6.0.4" 
         run: |-
           # set tag and publish current version
           git tag -a "v6.0.4" -m "New tag" 
@@ -34,5 +25,5 @@ jobs:
           git switch -c master
           git fetch origin master --depth=1
           git -vvv push -u origin master
-      - name: Update To Next Version
+
 
