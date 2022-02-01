@@ -14,7 +14,7 @@ jobs:
     name: Update version name
     runs-on: ubuntu-latest
     outputs:
-      version: "v6.0.3" 
+      version: "v6.0.4" 
     steps:
       - uses: actions/checkout@v2
 #       - uses: actions-rs/toolchain@v1
@@ -23,35 +23,16 @@ jobs:
 #           profile: minimal
 #           override: true
 
-      - name: update version name
-        id: update
-        run: |- 
-          git config --global user.email "30427827+peterjuma@users.noreply.github.com"
-          git config --global user.name "Peter Juma"
-          # update version name
-          echo "Making changes $(date)" >> CHANGE.LOG
-          VERSION="v6.0.3"
-          # commit & tag
-          git add CHANGE.LOG
-          git commit -m "$VERSION"
-          git branch releasing
-          git push -u origin releasing
-
       - name: Push tag
         env:
-          VERSION: "v6.0.3" 
+          VERSION: "v6.0.4" 
         run: |-
           # set tag and publish current version
-          git tag -a "v6.0.3" -m "New tag" 
+          git tag -a "v6.0.4" -m "New tag" 
           git push && git push --tags
           # create master and push
           git switch -c master
           git fetch origin master --depth=1
           git -vvv push -u origin master
       - name: Update To Next Version
-        run: |
-          VERSION="v6.0.4" 
-          git add .
-          git commit -m "prepare for next version: $VERSION"
-          git push
-          git push --delete origin releasing
+
