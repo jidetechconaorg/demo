@@ -1,0 +1,31 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  pre-build:
+    name: Update version name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Push tag
+        run: |-
+          git config --global user.email "30427827+peterjuma@users.noreply.github.com"
+          git config --global user.name "Peter Juma"
+          # set tag and publish current version
+          git tag -a "v6.0.4" -m "New tag" 
+          git push && git push --tags
+          # create master and push
+          git switch -c master
+          git fetch origin master --depth=1
+          git push -u origin master
+
+
