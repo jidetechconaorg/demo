@@ -26,6 +26,6 @@ jobs:
           # create master and push
           git switch master
           git fetch origin master --depth=1
-          git -vvv push -u origin master
+          git push -u origin master
 
 
