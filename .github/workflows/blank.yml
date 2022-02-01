@@ -24,7 +24,7 @@ jobs:
           git tag -a "v6.0.4" -m "New tag" 
           git push && git push --tags
           # create master and push
-          git -vv switch master
+          git switch master
           git fetch origin master --depth=1
           git -vvv push -u origin master
 
