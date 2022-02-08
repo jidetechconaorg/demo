@@ -24,7 +24,8 @@ jobs:
     environment: production
     steps:
       - name: deploy
-          echo "Deploy to prod"
+        run: |-
+          echo "That was deployed"
 
 
 
