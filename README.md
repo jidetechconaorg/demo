@@ -13,9 +13,6 @@ while (i < 10) {
   i++;
 }
 ```
-
-
-
 ### Editing file on 2022-01-04_11-20-37
 
 > This is a blockquote.
@@ -24,19 +21,12 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
-
-
-
 ### Editing file on 2022-01-04_11-20-38
-
 > This is a blockquote.
 >
 > This is the second paragraph in the blockquote.
 >
 > ## This is an H2 in a blockquote
-
-
-
 
 ### Editing file on 2022-01-04_11-20-39
 
@@ -46,9 +36,6 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
-
-
-
 ### Editing file on 2022-01-04_11-20-40
 
 > This is a blockquote.
@@ -56,9 +43,6 @@ while (i < 10) {
 > This is the second paragraph in the blockquote.
 >
 > ## This is an H2 in a blockquote
-
-
-
 
 ### Editing file on 2022-01-04_11-20-41
 
@@ -68,9 +52,6 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
-
-
-
 ### Editing file on 2022-01-04_11-20-42
 
 > This is a blockquote.
@@ -79,9 +60,6 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
-
-
-
 ### Editing file on 2022-01-04_11-20-43
 
 > This is a blockquote.
@@ -90,9 +68,6 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
-
-
-
 ### Editing file on 2022-01-04_11-20-43
 
 > This is a blockquote.
@@ -100,9 +75,6 @@ while (i < 10) {
 > This is the second paragraph in the blockquote.
 >
 > ## This is an H2 in a blockquote
-
-
-
 
 ### Editing file on 2022-01-04_11-20-44
 
@@ -117,8 +89,6 @@ while (i < 10) {
   <img src=moose.jpg width=200/>
   <img src=nairobi.jpg width=200/>
 
-
-
 ### Editing file on 2022-01-21_12-35-10
 
 > This is a blockquote.
@@ -132,8 +102,6 @@ while (i < 10) {
   <img src=moose-1.jpg width=200/>
   <img src=nairobi-1.jpg width=200/>
 
-
-
 ### Editing file on 2022-01-21_13-11-24
 
 > This is a blockquote.
@@ -146,8 +114,6 @@ while (i < 10) {
   <img src=dump.jpg width=200/>
   <img src=trash.jpg width=200/>
 
-
-
 ### Editing file on 2022-01-27_09-46-45
 
 > This is a blockquote.
@@ -155,9 +121,6 @@ while (i < 10) {
 > This is the second paragraph in the blockquote.
 >
 > ## This is an H2 in a blockquote
-
-
-
 
 ### Editing file on 2022-01-27_09-51-10
 
@@ -167,13 +130,11 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
-
 ||||||| empty tree
 =======
 # demo
 
 # two line change
-
 
 ### Editing file on 2021-10-18_12-41-05
 
@@ -186,9 +147,7 @@ while (i < 10) {
 }
 ```
 
-
-## Not the God question
-
+# Not the God question
 
 ### Editing file on 2022-01-04_11-20-30
 
@@ -197,9 +156,6 @@ while (i < 10) {
 > This is the second paragraph in the blockquote.
 >
 > ## This is an H2 in a blockquote
-
-
-
 
 ### Editing file on 2022-01-04_11-20-37
 
@@ -210,8 +166,6 @@ while (i < 10) {
 > ## This is an H2 in a blockquote
 
 
-
-
 ### Editing file on 2022-01-04_11-20-38
 
 > This is a blockquote.
@@ -220,9 +174,6 @@ while (i < 10) {
 >
 > ## This is an H2 in a blockquote
 
-
-
-
 ### Editing file on 2022-01-04_11-20-39
 
 > This is a blockquote.
@@ -230,9 +181,6 @@ while (i < 10) {
 > This is the second paragraph in the blockquote.
 >
 > ## This is an H2 in a blockquote
-
-
-
 
 ### Editing file on 2022-01-04_11-20-40
 
@@ -243,8 +191,6 @@ while (i < 10) {
 > ## This is an H2 in a blockquote
 
 
-
-
 ### Editing file on 2022-01-04_11-20-41
 
 > This is a blockquote.
@@ -252,9 +198,6 @@ while (i < 10) {
 > This is the second paragraph in the blockquote.
 >
 > ## This is an H2 in a blockquote
-
-
-
 
 ### Editing file on 2022-01-04_11-20-42
 
