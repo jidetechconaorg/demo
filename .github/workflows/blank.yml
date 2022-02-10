@@ -21,7 +21,7 @@ jobs:
           echo "That went well"
   deployment:
     runs-on: ubuntu-latest
-    environment: production
+    environment: staging
     steps:
       - name: deploy
         run: |-
