@@ -19,5 +19,14 @@ jobs:
       - name: Push tag
         run: |-
           echo "That went well"
+  deployment:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: deploy
+        run: |-
+          echo "That was deployed"
+
+
 
 
