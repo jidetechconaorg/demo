@@ -1,32 +1,13 @@
-name: CI
-
-# Controls when the workflow will run
+name: delete comments from open-collective-bot
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
+  issue_comment:
+    types: [created]
 jobs:
-  pre-build:
-    name: Update version name
+  delete-comments:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Push tag
-        run: |-
-          echo "That went well"
-  deployment:
-    runs-on: ubuntu-latest
-    environment: staging
-    steps:
-      - name: deploy
-        run: |-
-          echo "That was deployed"
-
-
-
-
+      - uses: izhangzhihao/delete-comment@master
+        with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          delete_user_name: jumapeter
+          issue_number: ${{ github.event.number }}  # remove comments from the current PR
